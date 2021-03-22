@@ -62,7 +62,7 @@ def get_authenticated_service(data):
     )
     setup_client_secrets(CLIENT_SECRETS_FILE, 'delete')
 
-    storage = Storage(f'brokers/youtube/credentials-oauth2.json')
+    storage = Storage(f'credentials-oauth2.json')
     credentials = storage.get()
 
     if credentials is None or credentials.invalid:
