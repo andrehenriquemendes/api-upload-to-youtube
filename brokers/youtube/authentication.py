@@ -30,7 +30,7 @@ def data_simplenamespace(data):
     data.pop('origin_channel', None)
     data.pop('origin_video_url', None)
     data['logging_level'] = 'ERROR'
-    data['noauth_local_webserver'] = config('NOAUTH_LOCAL_WEBSERVER')
+    data['noauth_local_webserver'] = config('NOAUTH_LOCAL_WEBSERVER') == 'True'
     data['auth_host_name'] = config('AUTH_HOST_NAME')
     data['auth_host_port'] = [8080, 8090]
     return SimpleNamespace(**data)
